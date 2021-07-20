@@ -13,6 +13,7 @@
 		47AEA42826A71C3A00D68B76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AEA42626A71C3A00D68B76 /* Main.storyboard */; };
 		47AEA42A26A71C3B00D68B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47AEA42926A71C3B00D68B76 /* Assets.xcassets */; };
 		47AEA42D26A71C3B00D68B76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AEA42B26A71C3B00D68B76 /* LaunchScreen.storyboard */; };
+		47AEA43C26A71EC000D68B76 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AEA43B26A71EC000D68B76 /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		47AEA42926A71C3B00D68B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47AEA42C26A71C3B00D68B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47AEA42E26A71C3B00D68B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47AEA43B26A71EC000D68B76 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		47AEA43726A71DE900D68B76 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				47AEA43A26A71E9F00D68B76 /* Cells */,
 				47AEA42426A71C3A00D68B76 /* ViewController.swift */,
 				47AEA42626A71C3A00D68B76 /* Main.storyboard */,
 			);
@@ -97,6 +100,14 @@
 				47AEA42E26A71C3B00D68B76 /* Info.plist */,
 			);
 			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		47AEA43A26A71E9F00D68B76 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				47AEA43B26A71EC000D68B76 /* MainTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 			files = (
 				47AEA42526A71C3A00D68B76 /* ViewController.swift in Sources */,
 				47AEA42126A71C3A00D68B76 /* AppDelegate.swift in Sources */,
+				47AEA43C26A71EC000D68B76 /* MainTableViewCell.swift in Sources */,
 				47AEA42326A71C3A00D68B76 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
