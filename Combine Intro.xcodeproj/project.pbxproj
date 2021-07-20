@@ -56,15 +56,47 @@
 		47AEA41F26A71C3A00D68B76 /* Combine Intro */ = {
 			isa = PBXGroup;
 			children = (
-				47AEA42026A71C3A00D68B76 /* AppDelegate.swift */,
-				47AEA42226A71C3A00D68B76 /* SceneDelegate.swift */,
+				47AEA43526A71DD000D68B76 /* Models */,
+				47AEA43626A71DDB00D68B76 /* Scenes */,
+				47AEA43826A71DF800D68B76 /* Support Files */,
+			);
+			path = "Combine Intro";
+			sourceTree = "<group>";
+		};
+		47AEA43526A71DD000D68B76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		47AEA43626A71DDB00D68B76 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				47AEA43726A71DE900D68B76 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		47AEA43726A71DE900D68B76 /* Main */ = {
+			isa = PBXGroup;
+			children = (
 				47AEA42426A71C3A00D68B76 /* ViewController.swift */,
 				47AEA42626A71C3A00D68B76 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		47AEA43826A71DF800D68B76 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				47AEA42026A71C3A00D68B76 /* AppDelegate.swift */,
+				47AEA42226A71C3A00D68B76 /* SceneDelegate.swift */,
 				47AEA42926A71C3B00D68B76 /* Assets.xcassets */,
 				47AEA42B26A71C3B00D68B76 /* LaunchScreen.storyboard */,
 				47AEA42E26A71C3B00D68B76 /* Info.plist */,
 			);
-			path = "Combine Intro";
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
