@@ -7,13 +7,15 @@ class ViewController: UIViewController {
     private let tableView = UITableView()
     private var observers: [AnyCancellable] = []
     private var companies: [String] = []
+    private var followers: [Follower] = []
     
     
     // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
-        fetchCompanies()
+//        fetchCompanies()
+        fetchFollowers()
     }
 }
 
@@ -22,15 +24,16 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return companies.count
+        return followers.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseId, for: indexPath) as! MainTableViewCell
-        cell.action.sink { value in
-            print(value)
-        }.store(in: &observers)
+//        cell.action.sink { value in
+//            print(value)
+//        }.store(in: &observers)
+        cell.textLabel?.text = followers[indexPath.row].login
         return cell
     }
 }
@@ -53,8 +56,22 @@ private extension ViewController {
                 guard let self = self else { return }
                 self.companies = values
                 self.tableView.reloadData()
-            }).store(in: &observers)
+            })
+            .store(in: &observers)
     }
+    
+    
+    func fetchFollowers() {
+        NetworkManager.shared.getFollwers(for: "SAllen0400", page: 20)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] values in
+                guard let self = self else { return }
+                self.followers = values
+                self.tableView.reloadData()
+            }
+            .store(in: &observers)
+    }
+    
     
     func configureViews() {
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.reuseId)
