@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472DFA3626A87184004EB2E9 /* GithubEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DFA3526A87184004EB2E9 /* GithubEndPoint.swift */; };
+		472DFA3D26A87211004EB2E9 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DFA3C26A87211004EB2E9 /* Follower.swift */; };
 		47AEA42126A71C3A00D68B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AEA42026A71C3A00D68B76 /* AppDelegate.swift */; };
 		47AEA42326A71C3A00D68B76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AEA42226A71C3A00D68B76 /* SceneDelegate.swift */; };
 		47AEA42526A71C3A00D68B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AEA42426A71C3A00D68B76 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		472DFA3526A87184004EB2E9 /* GithubEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndPoint.swift; sourceTree = "<group>"; };
+		472DFA3C26A87211004EB2E9 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		47AEA41D26A71C3A00D68B76 /* Combine Intro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combine Intro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47AEA42026A71C3A00D68B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47AEA42226A71C3A00D68B76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 		47AEA43526A71DD000D68B76 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				472DFA3C26A87211004EB2E9 /* Follower.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				47AEA43F26A7204000D68B76 /* NetworkManager.swift */,
+				472DFA3526A87184004EB2E9 /* GithubEndPoint.swift */,
 			);
 			path = Mangers;
 			sourceTree = "<group>";
@@ -192,10 +198,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				47AEA42526A71C3A00D68B76 /* ViewController.swift in Sources */,
+				472DFA3D26A87211004EB2E9 /* Follower.swift in Sources */,
 				47AEA42126A71C3A00D68B76 /* AppDelegate.swift in Sources */,
 				47AEA44026A7204000D68B76 /* NetworkManager.swift in Sources */,
 				47AEA43C26A71EC000D68B76 /* MainTableViewCell.swift in Sources */,
 				47AEA42326A71C3A00D68B76 /* SceneDelegate.swift in Sources */,
+				472DFA3626A87184004EB2E9 /* GithubEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
