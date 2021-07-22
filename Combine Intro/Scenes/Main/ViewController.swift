@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         configureViews()
 //        fetchCompanies()
         fetchFollowers()
+        fetchUserInfo()
     }
 }
 
@@ -68,6 +69,17 @@ private extension ViewController {
                 guard let self = self else { return }
                 self.followers = values
                 self.tableView.reloadData()
+            }
+            .store(in: &observers)
+    }
+    
+    
+    func fetchUserInfo() {
+        NetworkManager.shared.getUserInfo(for: "SAllen0400")
+            .receive(on: DispatchQueue.main)
+            .sink { value in
+//                guard let self = self else { return }
+                print("User: \(value)")
             }
             .store(in: &observers)
     }
