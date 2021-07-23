@@ -18,10 +18,12 @@
 		47AEA42D26A71C3B00D68B76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AEA42B26A71C3B00D68B76 /* LaunchScreen.storyboard */; };
 		47AEA43C26A71EC000D68B76 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AEA43B26A71EC000D68B76 /* MainTableViewCell.swift */; };
 		47AEA44026A7204000D68B76 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AEA43F26A7204000D68B76 /* NetworkManager.swift */; };
+		47E2849426AB1E8B00D6B9B0 /* CatEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E2849326AB1E8B00D6B9B0 /* CatEndPoint.swift */; };
+		47E2849926AB1F9D00D6B9B0 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E2849826AB1F9D00D6B9B0 /* Fact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		472DFA3526A87184004EB2E9 /* GithubEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndPoint.swift; sourceTree = "<group>"; };
+		472DFA3526A87184004EB2E9 /* GithubEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GithubEndPoint.swift; path = ../GithubEndPoint.swift; sourceTree = "<group>"; };
 		472DFA3C26A87211004EB2E9 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		478DF8DC26A9850D00FD678E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		47AEA41D26A71C3A00D68B76 /* Combine Intro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combine Intro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +36,8 @@
 		47AEA42E26A71C3B00D68B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47AEA43B26A71EC000D68B76 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		47AEA43F26A7204000D68B76 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		47E2849326AB1E8B00D6B9B0 /* CatEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatEndPoint.swift; sourceTree = "<group>"; };
+		47E2849826AB1F9D00D6B9B0 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			children = (
 				472DFA3C26A87211004EB2E9 /* Follower.swift */,
 				478DF8DC26A9850D00FD678E /* User.swift */,
+				47E2849826AB1F9D00D6B9B0 /* Fact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,10 +129,19 @@
 		47AEA43E26A7203000D68B76 /* Mangers */ = {
 			isa = PBXGroup;
 			children = (
+				47E2849226AB1E6100D6B9B0 /* End Points */,
 				47AEA43F26A7204000D68B76 /* NetworkManager.swift */,
-				472DFA3526A87184004EB2E9 /* GithubEndPoint.swift */,
 			);
 			path = Mangers;
+			sourceTree = "<group>";
+		};
+		47E2849226AB1E6100D6B9B0 /* End Points */ = {
+			isa = PBXGroup;
+			children = (
+				472DFA3526A87184004EB2E9 /* GithubEndPoint.swift */,
+				47E2849326AB1E8B00D6B9B0 /* CatEndPoint.swift */,
+			);
+			path = "End Points";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +215,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				47AEA42526A71C3A00D68B76 /* ViewController.swift in Sources */,
+				47E2849426AB1E8B00D6B9B0 /* CatEndPoint.swift in Sources */,
 				472DFA3D26A87211004EB2E9 /* Follower.swift in Sources */,
 				47AEA42126A71C3A00D68B76 /* AppDelegate.swift in Sources */,
 				47AEA44026A7204000D68B76 /* NetworkManager.swift in Sources */,
 				478DF8DD26A9850D00FD678E /* User.swift in Sources */,
 				47AEA43C26A71EC000D68B76 /* MainTableViewCell.swift in Sources */,
+				47E2849926AB1F9D00D6B9B0 /* Fact.swift in Sources */,
 				47AEA42326A71C3A00D68B76 /* SceneDelegate.swift in Sources */,
 				472DFA3626A87184004EB2E9 /* GithubEndPoint.swift in Sources */,
 			);
