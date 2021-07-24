@@ -44,4 +44,16 @@ extension NetworkManager {
             .replaceError(with: User(login: "", avatarUrl: "", name: "", location: "", bio: "", company: "", email: "", publicRepos: 0, publicGists: 0, htmlUrl: "", following: 0, followers: 0, createdAt: Date()))
             .eraseToAnyPublisher()
     }
+    
+    
+    func getFacts() -> AnyPublisher<[Fact], Never> {
+        let endPoint = CatEndPoint.facts
+        let url = endPoint.url
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: [Fact].self, decoder: JSONDecoder())
+            .replaceError(with: [Fact]())
+            .eraseToAnyPublisher()
+    }
 }
