@@ -8,7 +8,8 @@ class ViewController: UIViewController {
     private var observers: [AnyCancellable] = []
     private var companies: [String] = []
     private var followers: [Follower] = []
-    
+    private var facts: [Fact] = []
+
     
     // MARK: View Controller
     override func viewDidLoad() {
@@ -16,7 +17,8 @@ class ViewController: UIViewController {
         configureViews()
 //        fetchCompanies()
         fetchFollowers()
-        fetchUserInfo()
+//        fetchUserInfo()
+//        fetchCatFacts()
     }
 }
 
@@ -78,8 +80,18 @@ private extension ViewController {
         NetworkManager.shared.getUserInfo(for: "SAllen0400")
             .receive(on: DispatchQueue.main)
             .sink { value in
-//                guard let self = self else { return }
                 print("User: \(value)")
+            }
+            .store(in: &observers)
+    }
+    
+    
+    func fetchCatFacts() {
+        NetworkManager.shared.getFacts()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] values in
+                guard let self = self else { return }
+                self.facts = values
             }
             .store(in: &observers)
     }
