@@ -9,6 +9,7 @@ class ViewController: UIViewController {
     private var companies: [String] = []
     private var followers: [Follower] = []
     private var facts: [Fact] = []
+    private var username = "SAllen0400"
 
     
     // MARK: View Controller
@@ -65,7 +66,7 @@ private extension ViewController {
     
     
     func fetchFollowers() {
-        NetworkManager.shared.getFollwers(for: "SAllen0400", page: 20)
+        NetworkManager.shared.getFollwers(for: username, page: 20)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] values in
                 guard let self = self else { return }
@@ -77,7 +78,7 @@ private extension ViewController {
     
     
     func fetchUserInfo() {
-        NetworkManager.shared.getUserInfo(for: "SAllen0400")
+        NetworkManager.shared.getUserInfo(for: username)
             .receive(on: DispatchQueue.main)
             .sink { value in
                 print("User: \(value)")
