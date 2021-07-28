@@ -16,10 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
-//        fetchCompanies()
+        fetchCompanies()
         fetchFollowers()
-//        fetchUserInfo()
-//        fetchCatFacts()
+        fetchUserInfo()
+        fetchCatFacts()
     }
 }
 
