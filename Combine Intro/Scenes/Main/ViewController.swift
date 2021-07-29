@@ -34,9 +34,9 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseId, for: indexPath) as! MainTableViewCell
-//        cell.action.sink { value in
-//            print(value)
-//        }.store(in: &observers)
+        cell.action.sink { value in
+            print(value)
+        }.store(in: &observers)
         cell.textLabel?.text = followers[indexPath.row].login
         return cell
     }
