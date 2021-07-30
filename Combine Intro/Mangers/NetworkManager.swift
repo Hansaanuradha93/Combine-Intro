@@ -8,6 +8,7 @@ class NetworkManager {
     private init() {}
     
     private let perPage = 10
+    private let companies = ["Apple", "Google", "Facebook", "Microsoft"]
 }
 
 // MARK: - Methods
@@ -16,7 +17,7 @@ extension NetworkManager {
     func fetchCompanies() -> Future <[String], Error> {
         return Future { promise in
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                promise(.success(["Apple", "Google", "Facebook", "Microsoft"]))
+                promise(.success(self.companies))
             }
         }
     }
