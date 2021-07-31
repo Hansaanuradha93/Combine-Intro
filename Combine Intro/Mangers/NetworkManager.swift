@@ -57,4 +57,42 @@ extension NetworkManager {
             .replaceError(with: [Fact]())
             .eraseToAnyPublisher()
     }
+    
+    
+    func getCovidData(completed: @escaping (Result<User, Error>) -> Void) {
+//        let endPoint = GithubEndPoint.user(username: username)
+        let url = URL(string: "https://api.coronavirus.data.gov.uk/v1/data")!
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let _ = error {
+//                completed(.failure(.unableToComplete))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+//                completed(.failure(.invalidResponse))
+                return
+            }
+            
+            guard let data = data else {
+//                completed(.failure(.invalidData))
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                decoder.dateDecodingStrategy = .iso8601
+//                let json = try decoder.decode(<#T##type: Decodable.Protocol##Decodable.Protocol#>, from: <#T##Data#>)
+//                let user = try decoder.decode(User.self, from: data)
+//                completed(.success(user))
+            } catch let error {
+                print("Error: \(error)")
+//                completed(.failure(.invalidData))
+            }
+        }
+        task.resume()
+    }
+    
+    
 }
