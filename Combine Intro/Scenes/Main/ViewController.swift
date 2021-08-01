@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         fetchFollowers()
         fetchUserInfo()
         fetchCatFacts()
+        fetchCovidData()
     }
 }
 
@@ -45,6 +46,17 @@ extension ViewController: UITableViewDataSource {
 
 // MARK: - Private Methods
 private extension ViewController {
+    
+    func fetchCovidData() {
+        NetworkManager.shared.getCovidData { result in
+            switch result {
+            case .success(let user):
+                print("success")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
     func fetchCompanies() {
         NetworkManager.shared.fetchCompanies()
