@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		472DFA3626A87184004EB2E9 /* GithubEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DFA3526A87184004EB2E9 /* GithubEndPoint.swift */; };
 		472DFA3D26A87211004EB2E9 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DFA3C26A87211004EB2E9 /* Follower.swift */; };
+		474120BB26B82A1A0091DBCD /* CovidInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474120BA26B82A1A0091DBCD /* CovidInfo.swift */; };
 		478DF8DD26A9850D00FD678E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DF8DC26A9850D00FD678E /* User.swift */; };
 		47AEA42126A71C3A00D68B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AEA42026A71C3A00D68B76 /* AppDelegate.swift */; };
 		47AEA42326A71C3A00D68B76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AEA42226A71C3A00D68B76 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		472DFA3526A87184004EB2E9 /* GithubEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GithubEndPoint.swift; path = ../GithubEndPoint.swift; sourceTree = "<group>"; };
 		472DFA3C26A87211004EB2E9 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		474120BA26B82A1A0091DBCD /* CovidInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfo.swift; sourceTree = "<group>"; };
 		478DF8DC26A9850D00FD678E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		47AEA41D26A71C3A00D68B76 /* Combine Intro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combine Intro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47AEA42026A71C3A00D68B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		47AEA43526A71DD000D68B76 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				474120BA26B82A1A0091DBCD /* CovidInfo.swift */,
 				472DFA3C26A87211004EB2E9 /* Follower.swift */,
 				478DF8DC26A9850D00FD678E /* User.swift */,
 				47E2849826AB1F9D00D6B9B0 /* Fact.swift */,
@@ -222,6 +225,7 @@
 				478DF8DD26A9850D00FD678E /* User.swift in Sources */,
 				47AEA43C26A71EC000D68B76 /* MainTableViewCell.swift in Sources */,
 				47E2849926AB1F9D00D6B9B0 /* Fact.swift in Sources */,
+				474120BB26B82A1A0091DBCD /* CovidInfo.swift in Sources */,
 				47AEA42326A71C3A00D68B76 /* SceneDelegate.swift in Sources */,
 				472DFA3626A87184004EB2E9 /* GithubEndPoint.swift in Sources */,
 			);
