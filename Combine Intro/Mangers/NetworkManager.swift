@@ -58,6 +58,18 @@ extension NetworkManager {
             .eraseToAnyPublisher()
     }
     
+    func getCovidData() -> AnyPublisher <CovidInfo, Never> {
+        let endPoint = CovidEndPoint.data
+        let url = endPoint.url
+        let sampleDate = CovidInfo(length: nil, maxPageLimit: nil, totalRecords: nil, data: nil)
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: CovidInfo.self, decoder: JSONDecoder())
+            .replaceError(with: sampleDate)
+            .eraseToAnyPublisher()
+    }
+    
     
     func getCovidData(completed: @escaping (Result<CovidInfo, Error>) -> Void) {
         let endPoint = CovidEndPoint.data
