@@ -69,44 +69,7 @@ extension NetworkManager {
             .replaceError(with: sampleDate)
             .eraseToAnyPublisher()
     }
-    
-    
-    func getCovidData(completed: @escaping (Result<CovidInfo, Error>) -> Void) {
-        let endPoint = CovidEndPoint.data
-        let url = endPoint.url
-        print("url: \(url)")
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print(error)
-//                completed(.failure(.unableToComplete))
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-//                completed(.failure(.invalidResponse))
-                return
-            }
-            
-            guard let data = data else {
-//                completed(.failure(.invalidData))
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                decoder.dateDecodingStrategy = .iso8601
-                let covidInfo = try decoder.decode(CovidInfo.self, from: data)
-                print(covidInfo)
-//                completed(.success(user))
-            } catch let error {
-                print("Error: \(error)")
-//                completed(.failure(.invalidData))
-            }
-        }
-        task.resume()
-    }
+
     
     
 }
