@@ -48,14 +48,12 @@ extension ViewController: UITableViewDataSource {
 private extension ViewController {
     
     func fetchCovidData() {
-        NetworkManager.shared.getCovidData { result in
-            switch result {
-            case .success(let user):
-                print("success")
-            case .failure(let error):
-                print(error)
+        NetworkManager.shared.getCovidData()
+            .receive(on: DispatchQueue.main)
+            .sink { values in
+                print(values)
             }
-        }
+            .store(in: &observers)
     }
     
     func fetchCompanies() {
