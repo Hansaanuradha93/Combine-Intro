@@ -58,6 +58,7 @@ extension NetworkManager {
             .eraseToAnyPublisher()
     }
     
+    
     func getCovidData() -> AnyPublisher <CovidInfo, Never> {
         let endPoint = CovidEndPoint.data
         let url = endPoint.url
@@ -69,7 +70,4 @@ extension NetworkManager {
             .replaceError(with: sampleDate)
             .eraseToAnyPublisher()
     }
-
-    
-    
 }
