@@ -56,6 +56,7 @@ private extension ViewController {
             .store(in: &observers)
     }
     
+    
     func fetchCompanies() {
         NetworkManager.shared.fetchCompanies()
             .receive(on: DispatchQueue.main)
@@ -115,4 +116,3 @@ private extension ViewController {
         tableView.frame = view.bounds
     }
 }
-
