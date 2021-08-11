@@ -3,7 +3,6 @@ import Foundation
 // MARK: Cases
 enum CovidEndPoint {
     case data
-    
 }
 
 
