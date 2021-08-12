@@ -7,6 +7,7 @@ struct CovidInfo: Codable, Hashable {
     let data: [DailyRecord]?
 }
 
+
 struct DailyRecord: Codable, Hashable {
     let date: String?
     let name: String?
