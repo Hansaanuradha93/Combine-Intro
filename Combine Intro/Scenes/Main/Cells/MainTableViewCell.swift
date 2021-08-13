@@ -42,6 +42,7 @@ private extension MainTableViewCell {
         action.send("button tapped!")
     }
     
+    
     func configureViews() {
         contentView.addSubview(button)
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
