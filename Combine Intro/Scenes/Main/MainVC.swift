@@ -1,7 +1,7 @@
 import UIKit
 import Combine
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
     
     // MARK: Properties
     private let tableView = UITableView()
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
 
 // MARK: - TableView Datasource
-extension ViewController: UITableViewDataSource {
+extension MainVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return followers.count
@@ -45,7 +45,7 @@ extension ViewController: UITableViewDataSource {
 
 
 // MARK: - Private Methods
-private extension ViewController {
+private extension MainVC {
     
     func fetchCovidData() {
         NetworkManager.shared.getCovidData()
