@@ -5,6 +5,7 @@ struct CovidInfo: Codable, Hashable {
     let maxPageLimit: Int?
     let totalRecords: Int?
     let data: [DailyRecord]?
+    let test: Int? // remove it
 }
 
 
