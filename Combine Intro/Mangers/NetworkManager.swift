@@ -11,6 +11,7 @@ class NetworkManager {
     private let companies = ["Apple", "Google", "Facebook", "Microsoft"]
 }
 
+
 // MARK: - Methods
 extension NetworkManager {
     
